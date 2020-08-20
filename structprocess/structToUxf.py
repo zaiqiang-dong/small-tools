@@ -51,7 +51,7 @@ def preorder_travers_AST(cursor):
 
     for cur in cursor.get_children():
         t = cur.type
-        print(" " * tab * 4 + t.spelling + " " + cur.spelling +  " - > "+ str(cur.lexical_parent.spelling))
+        #print(" " * tab * 4 + t.spelling + " " + cur.spelling +  " - > "+ str(cur.lexical_parent.spelling))
         if tab == 0:
             lpnode.append(PNode(t.spelling ,cur.spelling))
         else:
