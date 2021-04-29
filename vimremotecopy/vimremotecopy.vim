@@ -17,7 +17,7 @@ function! VisualSelection()
     let lines[-1] = lines[-1][: column_end - 1]
     let lines[0] = lines[0][column_start - 1:]
     let sel =  join(lines, "\n")
-    call system('nc -N 192.168.69.182 8377', sel)
+    call system('nc -N 192.168.69.182 30000', sel)
 endfunction
 
 map <C-c> : call VisualSelection()<CR>
